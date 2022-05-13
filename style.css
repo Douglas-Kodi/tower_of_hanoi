@@ -25,7 +25,7 @@ body{
     cursor:pointer;
 }
 .tower:hover{
-background:#FAFAD2; 
+    background:#FAFAD2; 
 }
 .tower::after{
     content: " ";
