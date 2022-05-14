@@ -15,21 +15,21 @@ function game(){
     })
 }
 
-function move(fromtower, totower){
-    if(!towers[fromtower].length)return
-    let disk = towers [fromtower].pop()
-    if(towers[totower].length){
-        if(towers[totower][towers[totower].length-1]<disk){
-            return towers[fromtower].push(disk)
+function move(from, to){
+    if(!towers[from].length)return
+    let disk = towers [from].pop()
+    if(towers[to].length){
+        if(towers[to][towers[to].length-1]<disk){
+            return towers[from].push(disk)
         }
     }
     let d = document.querySelector('.d'+disk)
     d.classList.add('p0')
-    towers[totower].push(disk)
+    towers[to].push(disk)
     setTimeout(game,500)
 }
 
-function clicktower(n){
+function tower(n){
     if(movements.length && movements[0].length==1){
         movements[0].push(n)
     }else{
